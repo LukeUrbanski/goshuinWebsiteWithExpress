@@ -4,7 +4,7 @@ var express         = require("express"),
 
 //Landing page route    
 router.get("/", function(req, res){
-    res.render("index");
+    res.render("landing");
 });    
 
 //Export the routes
