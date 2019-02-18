@@ -2,10 +2,10 @@ var mongoose            = require("mongoose");
 
 // schema
 var goshuinSchema = new mongoose.Schema({
-    locationName: String,
+    shrineOrTempleName: String,
     image: String,
     ward: String,
-    townOrCity: String,
+    generalLocation: String,
     Prefecture: String
 });
 

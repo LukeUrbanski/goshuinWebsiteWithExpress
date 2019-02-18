@@ -10,13 +10,21 @@ Goshuin.deleteMany({}, function(err){
 });
 
 // Seed the collection with six entries
-    Goshuin.create({
-        locationName: "Shibuya Suikawa Shrine",
+    Goshuin.create([
+        {
+        shrineOrTempleName: "Shibuya Suikawa Shrine",
         image: "https://i.imgur.com/Q5KmUGD.jpg",
         ward: "Shibuya",
-        townOrCity: "Tokyo",
+        generalLocation: "Tokyo",
         Prefecture: "Tokyo"
-    }, function(err, createdItem){
+    }, {
+        shrineOrTempleName: "Musashi Mitake Shrine",
+        image: "https://i.imgur.com/dUrotTy.jpg",
+        townOrCity: "Mount Mitake",
+        Prefecture: "Tokyo"
+    }
+        
+    ], function(err, createdItem){
     if(err){
         console.log(err);
     }

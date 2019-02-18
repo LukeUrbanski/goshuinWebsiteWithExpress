@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+<h1>Please look at some goshuins</h1>
+
+<div class="container">
+    <% goshuins.forEach(function(goshuin){ %>
+    
+        <div class="card">
+          <img src="<%= goshuin.image %>" class="card-img-top" alt="An image of a goshuin">
+          <div class="card-body">
+            <p class="card-title"><%= goshuin.shrineOrTempleName %></p>
+          </div>
+        </div>
+    
+    <% }); %>
+</div>
+
+<% include ../partials/footer %>
