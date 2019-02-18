@@ -1,0 +1,15 @@
+{
+  "name": "goshuin_website",
+  "version": "1.0.0",
+  "description": "This is a website dedicated to my hobby of collecting seals from shrines and temples in Japan. This website is made with node.js, the Express framework and MongoDB.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Urbanski",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

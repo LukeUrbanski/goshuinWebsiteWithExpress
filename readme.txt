@@ -1,0 +1,1 @@
+This is a website dedicated to my hobby of collecting seals from shrines and temples in Japan. This website is made with node.js, the Express framework and MongoDB.
