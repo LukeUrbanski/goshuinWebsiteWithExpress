@@ -7,6 +7,7 @@ var indexRoutes         = require("./routes/index.js");
 
 // General app settings
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
 // Utilize route variables
 app.use(indexRoutes);    
