@@ -9,22 +9,58 @@ Goshuin.deleteMany({}, function(err){
     }
 });
 
-// Seed the collection with six entries
-    Goshuin.create([
+var seedData = [
         {
         shrineOrTempleName: "Shibuya Suikawa Shrine",
         image: "https://i.imgur.com/Q5KmUGD.jpg",
-        ward: "Shibuya",
         generalLocation: "Tokyo",
         Prefecture: "Tokyo"
     }, {
         shrineOrTempleName: "Musashi Mitake Shrine",
         image: "https://i.imgur.com/dUrotTy.jpg",
-        townOrCity: "Mount Mitake",
+        generalLocation: "Mount Mitake",
         Prefecture: "Tokyo"
+    },
+    {
+        shrineOrTempleName: "Itsukushima shrine",
+        image: "https://i.imgur.com/NCpEZRF.jpg",
+        generalLocation: "Miyajima",
+        Prefecture: "Hiroshima"  
+    },
+    {
+        shrineOrTempleName: "Hiroshima Gokoku Shrine",
+        image: "https://i.imgur.com/MveeMmd.jpg",
+        generalLocation: "Hiroshima town",
+        Prefecture: "Hiroshima"  
+    },
+    {
+        shrineOrTempleName: "Takagi Shrine",
+        image: "https://i.imgur.com/eUIwRl7.jpg",
+        generalLocation: "Sumida",
+        Prefecture: "Tokyo"  
+    },
+    {
+        shrineOrTempleName: "Hanazono Shrine",
+        image: "https://i.imgur.com/uCAOxwi.jpg",
+        generalLocation: "Shinjuku",
+        Prefecture: "Tokyo"  
+    },
+    {
+        shrineOrTempleName: "Tsumakoi Shrine",
+        image: "https://i.imgur.com/Vpjhbnu.jpg",
+        generalLocation: "Bunkyo",
+        Prefecture: "Tokyo"  
+    },
+    {
+        shrineOrTempleName: "Karasumori Shrine",
+        image: "https://i.imgur.com/KCGVjpC.jpg",
+        generalLocation: "Shinbashi",
+        Prefecture: "Tokyo"  
     }
-        
-    ], function(err, createdItem){
+    ]
+
+// Seed the collection with six entries
+    Goshuin.create(seedData, function(err, createdItem){
     if(err){
         console.log(err);
     }
