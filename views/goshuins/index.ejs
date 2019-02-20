@@ -1,18 +1,31 @@
 <% include ../partials/header %>
 
-<h1>Please look at some goshuins</h1>
-
 <div class="container">
+  
+<!--Jumbotron (Page header) -->  
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Please look at some goshuins</h1> 
+      <p>View seals from temples and shrines all over Japan!</p>
+    </div>
+  </header> 
+
+<!-- Card columns to display the main content -->
+  <div class="card-columns">
+    <!-- forEach loop that traverses through the passed object -->
     <% goshuins.forEach(function(goshuin){ %>
-    
-        <div class="card">
-          <img src="<%= goshuin.image %>" class="card-img-top" alt="An image of a goshuin">
-          <div class="card-body">
-            <p class="card-title"><%= goshuin.shrineOrTempleName %></p>
-          </div>
+     
+      <div class="card bg-light">
+        <img id="myCardImage" class="card-img-top" src="<%= goshuin.image %>" alt="An image of a goshuin">
+        <div class="card-body">
+          <h5 class="card-title"><%= goshuin.shrineOrTempleName %></h5>
+          <a href="#" class="btn btn-primary">See more</a>
         </div>
+      </div> 
     
     <% }); %>
+  </div>
+
 </div>
 
 <% include ../partials/footer %>
