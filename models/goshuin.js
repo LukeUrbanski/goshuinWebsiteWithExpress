@@ -5,7 +5,7 @@ var goshuinSchema = new mongoose.Schema({
     shrineOrTempleName: String,
     image: String,
     generalLocation: String,
-    Prefecture: String
+    prefecture: String
 });
 
 // compile model into schema
