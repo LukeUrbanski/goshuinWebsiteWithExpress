@@ -51,3 +51,13 @@ hr {
     }
 }
 
+/* Styling for the show page */
+
+#myShowPageImage {
+    max-height:500px;
+    width: auto;
+}
+
+#myImageContainer{
+    margin:15px 0px;
+}
