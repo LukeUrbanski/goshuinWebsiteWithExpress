@@ -1,5 +1,9 @@
-html {
-    height:100%;
+
+
+/*container styling*/
+#myContainer{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 body{
