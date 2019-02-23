@@ -14,48 +14,48 @@ var seedData = [
         shrineOrTempleName: "Shibuya Suikawa Shrine",
         image: "https://i.imgur.com/Q5KmUGD.jpg",
         generalLocation: "Tokyo",
-        Prefecture: "Tokyo"
+        prefecture: "Tokyo"
     }, {
         shrineOrTempleName: "Musashi Mitake Shrine",
         image: "https://i.imgur.com/dUrotTy.jpg",
         generalLocation: "Mount Mitake",
-        Prefecture: "Tokyo"
+        prefecture: "Tokyo"
     },
     {
         shrineOrTempleName: "Itsukushima shrine",
         image: "https://i.imgur.com/NCpEZRF.jpg",
         generalLocation: "Miyajima",
-        Prefecture: "Hiroshima"  
+        prefecture: "Hiroshima"  
     },
     {
         shrineOrTempleName: "Hiroshima Gokoku Shrine",
         image: "https://i.imgur.com/MveeMmd.jpg",
         generalLocation: "Hiroshima town",
-        Prefecture: "Hiroshima"  
+        prefecture: "Hiroshima"  
     },
     {
         shrineOrTempleName: "Takagi Shrine",
         image: "https://i.imgur.com/eUIwRl7.jpg",
         generalLocation: "Sumida",
-        Prefecture: "Tokyo"  
+        prefecture: "Tokyo"  
     },
     {
         shrineOrTempleName: "Hanazono Shrine",
         image: "https://i.imgur.com/uCAOxwi.jpg",
         generalLocation: "Shinjuku",
-        Prefecture: "Tokyo"  
+        prefecture: "Tokyo"  
     },
     {
         shrineOrTempleName: "Tsumakoi Shrine",
         image: "https://i.imgur.com/Vpjhbnu.jpg",
         generalLocation: "Bunkyo",
-        Prefecture: "Tokyo"  
+        prefecture: "Tokyo"  
     },
     {
         shrineOrTempleName: "Karasumori Shrine",
         image: "https://i.imgur.com/KCGVjpC.jpg",
         generalLocation: "Shinbashi",
-        Prefecture: "Tokyo"  
+        prefecture: "Tokyo"  
     }
     ]
 
