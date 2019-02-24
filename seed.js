@@ -12,50 +12,66 @@ Goshuin.deleteMany({}, function(err){
 var seedData = [
         {
         shrineOrTempleName: "Shibuya Suikawa Shrine",
-        image: "https://i.imgur.com/Q5KmUGD.jpg",
         generalLocation: "Tokyo",
-        prefecture: "Tokyo"
+        prefecture: "Tokyo",
+        image: "https://i.imgur.com/Q5KmUGD.jpg",
+        comment: "",
+        date: ""
     }, {
         shrineOrTempleName: "Musashi Mitake Shrine",
-        image: "https://i.imgur.com/dUrotTy.jpg",
         generalLocation: "Mount Mitake",
-        prefecture: "Tokyo"
+        prefecture: "Tokyo",
+        image: "https://i.imgur.com/dUrotTy.jpg",
+        comment: "",
+        date: ""
     },
     {
         shrineOrTempleName: "Itsukushima shrine",
-        image: "https://i.imgur.com/NCpEZRF.jpg",
         generalLocation: "Miyajima",
-        prefecture: "Hiroshima"  
+        prefecture: "Hiroshima",
+        image: "https://i.imgur.com/NCpEZRF.jpg",
+        comment: "",
+        date: ""
     },
     {
         shrineOrTempleName: "Hiroshima Gokoku Shrine",
-        image: "https://i.imgur.com/MveeMmd.jpg",
         generalLocation: "Hiroshima town",
-        prefecture: "Hiroshima"  
+        prefecture: "Hiroshima",
+        image: "https://i.imgur.com/MveeMmd.jpg",
+        comment: "",
+        date: ""
     },
     {
         shrineOrTempleName: "Takagi Shrine",
-        image: "https://i.imgur.com/eUIwRl7.jpg",
         generalLocation: "Sumida",
-        prefecture: "Tokyo"  
+        prefecture: "Tokyo",
+        image: "https://i.imgur.com/eUIwRl7.jpg",
+        comment: "",
+        date: ""
     },
     {
         shrineOrTempleName: "Hanazono Shrine",
-        image: "https://i.imgur.com/uCAOxwi.jpg",
         generalLocation: "Shinjuku",
-        prefecture: "Tokyo"  
+        prefecture: "Tokyo",
+        image: "https://i.imgur.com/uCAOxwi.jpg",
+        comment: "",
+        date: ""
     },
     {
         shrineOrTempleName: "Tsumakoi Shrine",
-        image: "https://i.imgur.com/Vpjhbnu.jpg",
         generalLocation: "Bunkyo",
-        prefecture: "Tokyo"  
+        prefecture: "Tokyo",
+        image: "https://i.imgur.com/Vpjhbnu.jpg",
+        comment: "",
+        date: ""
     },
     {
         shrineOrTempleName: "Karasumori Shrine",
-        image: "https://i.imgur.com/KCGVjpC.jpg",
         generalLocation: "Shinbashi",
-        prefecture: "Tokyo"  
+        prefecture: "Tokyo",
+        image: "https://i.imgur.com/KCGVjpC.jpg",
+        comment: "",
+        date: ""
     }
     ]
 
