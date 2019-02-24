@@ -9,6 +9,13 @@ Goshuin.deleteMany({}, function(err){
     }
 });
 
+// Use the following data to manually test the create route
+        // shrineOrTempleName: "Ise shrine",
+        // generalLocation: "Ise shrine complex",
+        // prefecture: "Mie",
+        // image: "https://i.imgur.com/qbIsDHK.jpg",
+        // comment: "A goshuin from Japan's biggest shrine, Ise Shrine in Mie prefecture. What makes this special is that it is from January 1st, which is the busiest time of the year for shrines as it is hatsumoude. In addition to that, this shrine complex actually has two shrines, gekku (outer shrine) and naiku (inner shrine)."
+
 var seedData = [
         {
         shrineOrTempleName: "Shibuya Suikawa Shrine",
