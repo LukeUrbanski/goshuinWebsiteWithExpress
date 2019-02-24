@@ -14,7 +14,12 @@ router.get("/goshuins", function(req, res){
     });
 });
 
-// Show a specific goshuin route
+// Create a goshuin form route
+router.get("/goshuins/new", function(req, res){
+    res.render("goshuins/new");
+});
+
+// Read a specific goshuin route
 router.get("/goshuins/:id", function(req, res){
     Goshuin.findById(req.params.id, function(err, foundGoshuin){
         if(err){
