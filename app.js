@@ -2,8 +2,9 @@
 var express             = require("express"),
     app                 = express(),
     mongoose            = require("mongoose"),
-    seedDB              = require ("./seed.js");
-
+    seedDB              = require ("./seed.js"),
+    bodyParser          = require("body-parser");
+    
 // Require models
 var Goshuin = require("./models/goshuin.js");
     
@@ -20,6 +21,7 @@ var indexRoutes         = require("./routes/index.js"),
 // General app settings
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Utilize route variables
 app.use(indexRoutes);
