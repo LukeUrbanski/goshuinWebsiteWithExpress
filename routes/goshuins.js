@@ -19,6 +19,19 @@ router.get("/goshuins/new", function(req, res){
     res.render("goshuins/new");
 });
 
+// Create a goshuin post route
+router.post("/goshuins", function(req, res){
+    var newGoshuin = req.body;
+    Goshuin.create(newGoshuin, function(err, newGoshuin){
+        if(err){
+            console.log(err);
+        } else {
+            res.redirect("/goshuins")
+        }
+        
+    })
+})
+
 // Read a specific goshuin route
 router.get("/goshuins/:id", function(req, res){
     Goshuin.findById(req.params.id, function(err, foundGoshuin){
