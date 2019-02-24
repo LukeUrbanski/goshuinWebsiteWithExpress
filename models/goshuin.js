@@ -3,9 +3,11 @@ var mongoose            = require("mongoose");
 // schema
 var goshuinSchema = new mongoose.Schema({
     shrineOrTempleName: String,
-    image: String,
     generalLocation: String,
-    prefecture: String
+    prefecture: String,
+    image: String,
+    comment: String,
+    date: String
 });
 
 // compile model into schema
