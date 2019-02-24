@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+
+    <div class="form-group">
+    <form action="/goshuins" method="POST">
+        <input class="form-control" type="text" name="shrineOrTempleName" placeholder="Shrine or temple name.">
+        <input class="form-control" type="text" name="generalLocation" placeholder="General location, i.e. town, city, mountain...">
+        <input class="form-control" type="text" name="prefecture" placeholder="Prefecture">
+        <input class="form-control" type="text" name="image" placeholder="Image URL">
+        <input class="form-control" type="text" name="comment" placeholder="Any thoughts or comments about this goshuin are welcome.">
+
+        <input type="submit">
+    </form>
+    </div>
+
+<% include ../partials/footer %>
