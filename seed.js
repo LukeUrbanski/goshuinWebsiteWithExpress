@@ -22,14 +22,14 @@ var seedData = [
         generalLocation: "Tokyo",
         prefecture: "Tokyo",
         image: "https://i.imgur.com/Q5KmUGD.jpg",
-        comment: "",
+        comment: "A colourful goshuin, the colours and flower stamped use changes every month.",
         date: ""
     }, {
         shrineOrTempleName: "Musashi Mitake Shrine",
         generalLocation: "Mount Mitake",
         prefecture: "Tokyo",
         image: "https://i.imgur.com/dUrotTy.jpg",
-        comment: "",
+        comment: "This shrine is on top of Mount Mitake, it's a 1 or 2 hour walk to this shrine from the base of the mountain but you can take a cable car to make the journey much more shorter.",
         date: ""
     },
     {
@@ -37,7 +37,7 @@ var seedData = [
         generalLocation: "Miyajima",
         prefecture: "Hiroshima",
         image: "https://i.imgur.com/NCpEZRF.jpg",
-        comment: "",
+        comment: "This is a very famous shrine located on Miyajima, Hiroshima. In particular, the shrine gate (torii) in the water is a very popular photographic spot.",
         date: ""
     },
     {
@@ -45,7 +45,7 @@ var seedData = [
         generalLocation: "Hiroshima town",
         prefecture: "Hiroshima",
         image: "https://i.imgur.com/MveeMmd.jpg",
-        comment: "",
+        comment: "This is the shrine located in Hiroshima town, a short walk from the castle. Carps seem to be popular here, they are also the mascot for the famous Hiroshima Carps baseball team which makes me wonder why carps seem to be popular in Hiroshima town.",
         date: ""
     },
     {
@@ -53,7 +53,7 @@ var seedData = [
         generalLocation: "Sumida",
         prefecture: "Tokyo",
         image: "https://i.imgur.com/eUIwRl7.jpg",
-        comment: "",
+        comment: "This shrine is near the Tokyo Skytree, what is interesting is the vibrant purple colour of the shrine.",
         date: ""
     },
     {
@@ -61,7 +61,7 @@ var seedData = [
         generalLocation: "Shinjuku",
         prefecture: "Tokyo",
         image: "https://i.imgur.com/uCAOxwi.jpg",
-        comment: "",
+        comment: "The handwriting certainly is unique, I can't tell the date I got this goshuin as a result.",
         date: ""
     },
     {
@@ -69,7 +69,7 @@ var seedData = [
         generalLocation: "Bunkyo",
         prefecture: "Tokyo",
         image: "https://i.imgur.com/Vpjhbnu.jpg",
-        comment: "",
+        comment: "This cat goshuin was limited to just a few days. Nearly the whole thing is a stamp whereas the characters are usually written by a fude pen.",
         date: ""
     },
     {
@@ -77,7 +77,7 @@ var seedData = [
         generalLocation: "Shinbashi",
         prefecture: "Tokyo",
         image: "https://i.imgur.com/KCGVjpC.jpg",
-        comment: "",
+        comment: "This is arguably the most popular colour goshuin in Tokyo, it frequently turns up in books relating to goshuins.",
         date: ""
     }
     ]
