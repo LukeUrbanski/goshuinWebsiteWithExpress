@@ -1,15 +1,26 @@
 <% include ../partials/header %>
-
-    <div class="form-group">
-    <form action="/goshuins" method="POST">
-        <input class="form-control" type="text" name="shrineOrTempleName" placeholder="Shrine or temple name.">
-        <input class="form-control" type="text" name="generalLocation" placeholder="General location, i.e. town, city, mountain...">
-        <input class="form-control" type="text" name="prefecture" placeholder="Prefecture">
-        <input class="form-control" type="text" name="image" placeholder="Image URL">
-        <input class="form-control" type="text" name="comment" placeholder="Any thoughts or comments about this goshuin are welcome.">
-
-        <input type="submit">
-    </form>
+    
+    <div id="myContainer" class="container bg-light">
+        <div class="row">
+            <form class="col-md-12 p-3" action="/goshuins" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="shrineOrTempleName" placeholder="Shrine or temple name.">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="generalLocation" placeholder="General location, i.e. town, city, mountain...">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="prefecture" placeholder="Prefecture">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="Image URL">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="text" name="comment" placeholder="Any thoughts or comments about this goshuin are welcome." rows="3"></textarea>
+                </div>
+                <input type="submit">
+            </form>
+        </div>
     </div>
-
+    
 <% include ../partials/footer %>
