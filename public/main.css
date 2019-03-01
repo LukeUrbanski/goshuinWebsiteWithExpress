@@ -1,15 +1,11 @@
-
+body{
+    background-color: #536976;
+}
 
 /*container styling*/
 #myContainer{
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-body{
-background: #BBD2C5;
-background: -webkit-linear-gradient(to bottom, #BBD2C5, #292E49, #536976);
-background: linear-gradient(to bottom, #BBD2C5, #536976, #292E49);
 }
 
 #landing-header{
