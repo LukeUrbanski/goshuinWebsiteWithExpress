@@ -8,6 +8,9 @@
       <h1>Please look at some goshuins</h1> 
       <p>View seals from temples and shrines all over Japan!</p>
       <hr>
+      <a href="/goshuins/new">
+        <button class="btn btn-info">Add a new goshuin</button>
+      </a>
     </div>
   </header> 
 
@@ -20,7 +23,7 @@
         <h5 class="card-header"><%= goshuin.shrineOrTempleName %></h5>
         <img id="myCardImage" class="card-img-top" src="<%= goshuin.image %>" alt="An image of a goshuin">
         <div class="card-body">
-          <a href="/goshuins/<%= goshuin._id %>" class="btn btn-primary">See more</a>
+          <a href="/goshuins/<%= goshuin._id %>" class="btn btn-info">See more</a>
         </div>
       </div> 
     
