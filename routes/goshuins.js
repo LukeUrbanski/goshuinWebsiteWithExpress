@@ -43,3 +43,14 @@ router.get("/goshuins/:id", function(req, res){
 });
 
 module.exports = router;
+
+// Delete a goshuin
+router.post("/goshuins/:id", function(req, res){
+   Goshuin.findByIdAndDelete(req.params.id, function(err, deletedGoshuin){
+       if(err){
+           console.log(err);
+       } else {
+           res.redirect("/goshuins");
+       }
+   }) 
+});
