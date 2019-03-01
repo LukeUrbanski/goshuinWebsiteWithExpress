@@ -3,6 +3,7 @@ var express             = require("express"),
     app                 = express(),
     mongoose            = require("mongoose"),
     seedDB              = require ("./seed.js"),
+    methodOverride      = require("method-override"),
     bodyParser          = require("body-parser");
     
 // Require models
@@ -21,6 +22,7 @@ var indexRoutes         = require("./routes/index.js"),
 // General app settings
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Utilize route variables
