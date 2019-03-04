@@ -44,8 +44,38 @@ router.get("/goshuins/:id", function(req, res){
 
 module.exports = router;
 
+// =============
+// Edit routes
+//==============
+
+// Show goshuin edit form
+router.get("/goshuins/:id/edit", function(req, res){
+   Goshuin.findById(req.params.id, function(err, foundGoshuin){
+       if(err){
+           console.log("error");
+       } else {
+           res.render("goshuins/edit", {goshuin: foundGoshuin});
+       }
+   }) 
+});
+
+// Update goshuin post route
+router.put("/goshuins/:id", function(req, res){
+    Goshuin.findByIdAndUpdate(req.params.id,  req.body.goshuin, function(err, updatedGoshuin){
+        if(err){
+            console.log(err);
+        } else {
+            res.redirect("/goshuins/" + req.params.id);
+        }
+    })
+});
+
+// =============
+// Delete route
+//==============
+
 // Delete a goshuin
-router.post("/goshuins/:id", function(req, res){
+router.delete("/goshuins/:id", function(req, res){
    Goshuin.findByIdAndDelete(req.params.id, function(err, deletedGoshuin){
        if(err){
            console.log(err);
