@@ -17,9 +17,12 @@
                     <%= goshuin.comment %>
                 </p>
                 
-                <form action="/goshuins/<%= goshuin._id %>?_method" method="POST">
+                <form class=" d-inline" action="/goshuins/<%= goshuin._id %>?_method=delete" method="POST">
                     <button class="btn btn-danger btn-sm">Delete</button>
                 </form>
+                
+                    <a href="/goshuins/<%= goshuin._id %>/edit/"><button class="btn btn-warning btn-sm">Edit</button></a>
+                
             </div>
         </div>
         <!-- This row contains the comments for a particular goshuin -->
