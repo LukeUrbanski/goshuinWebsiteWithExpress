@@ -1,14 +1,19 @@
 // Load requirements
 var express         = require("express"),
     router          = express.Router(),
-    User            = require("../models/user.js");
+    User            = require("../models/user.js"),
+    passport        = require("passport");
 
 //Landing page route    
 router.get("/", function(req, res){
     res.render("landing");
 });
 
-// Create user form
+// ===============
+// Register routes
+// ===============
+
+// Show create user form
 router.get("/user/register", function(req, res){
     res.render("register");
 })
@@ -23,6 +28,21 @@ router.post("/user", function(req, res){
         }
     });
 });
+
+// ===============
+// Login routes
+// ===============
+
+// Show login form
+router.get("/login", function(req, res){
+   res.render("login"); 
+});
+
+// Login route
+router.post('/login', passport.authenticate('local', { 
+    successRedirect: '/goshuins',
+    failureRedirect: '/login'})
+);
 
 //Export the routes
 module.exports = router;
