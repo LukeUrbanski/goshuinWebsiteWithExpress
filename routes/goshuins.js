@@ -2,6 +2,9 @@ var express             = require("express"),
     router              = express.Router(),
     Goshuin             = require("../models/goshuin");
 
+//==============
+// Index route
+//==============
 
 // Main goshuin index route
 router.get("/goshuins", function(req, res){
@@ -13,6 +16,10 @@ router.get("/goshuins", function(req, res){
         }
     });
 });
+
+//==============
+// Create routes
+//==============
 
 // Create a goshuin form route
 router.get("/goshuins/new", function(req, res){
@@ -29,8 +36,12 @@ router.post("/goshuins", function(req, res){
             res.redirect("/goshuins")
         }
         
-    })
-})
+    });
+});
+
+//==============
+// Read route
+//==============
 
 // Read a specific goshuin route
 router.get("/goshuins/:id", function(req, res){
@@ -42,7 +53,7 @@ router.get("/goshuins/:id", function(req, res){
     });
 });
 
-module.exports = router;
+
 
 // =============
 // Edit routes
@@ -56,7 +67,7 @@ router.get("/goshuins/:id/edit", function(req, res){
        } else {
            res.render("goshuins/edit", {goshuin: foundGoshuin});
        }
-   }) 
+   }); 
 });
 
 // Update goshuin post route
@@ -67,10 +78,10 @@ router.put("/goshuins/:id", function(req, res){
         } else {
             res.redirect("/goshuins/" + req.params.id);
         }
-    })
+    });
 });
 
-// =============
+//==============
 // Delete route
 //==============
 
@@ -82,5 +93,7 @@ router.delete("/goshuins/:id", function(req, res){
        } else {
            res.redirect("/goshuins");
        }
-   }) 
+   }); 
 });
+
+module.exports = router;
