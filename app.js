@@ -23,8 +23,6 @@ seedDB();
 var indexRoutes         = require("./routes/index.js"),
     goshuinRoutes       = require("./routes/goshuins.js");
 
-
-
 // General app settings
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -43,6 +41,10 @@ app.use(passport.session());
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+});
 
 // Utilize route variables
 app.use(indexRoutes);
