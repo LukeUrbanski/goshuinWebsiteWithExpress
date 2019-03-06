@@ -20,7 +20,9 @@ router.get("/user/register", function(req, res){
 
 // Create a new user
 router.post("/user", function(req, res){
-    User.register({username: req.body.newUser.username}, req.body.newUser.password, function(err, newUser){
+    User.register({username: req.body.newUser.username}, 
+    req.body.newUser.password,
+    function(err, newUser){
         if(err){
             console.log(err);
         } else {
