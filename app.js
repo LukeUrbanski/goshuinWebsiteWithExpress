@@ -25,26 +25,30 @@ var indexRoutes         = require("./routes/index.js"),
 
 // General app settings
 app.set("view engine", "ejs");
-app.use(express.static("public"));
-app.use(methodOverride('_method'));
 
-// Authentication general settings
-app.use(expressSession({
-  secret: "1t3snsvnvosfinvosfvn3294nr3",
-  resave: false,
-  saveUninitialized: true
-}));
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(passport.initialize());
-app.use(passport.session());
-// Passport strategy configuration
+//Middleware settings
+app.use(
+        express.static("public"),
+        methodOverride('_method'),
+        expressSession({
+            secret: "1t3snsvnvosfinvosfvn3294nr3",
+            resave: false,
+            saveUninitialized: true
+        }),
+        bodyParser.urlencoded({extended: true}),
+        passport.initialize(),
+        passport.session(),
+        //Save the current user object
+        function(req, res, next){
+        res.locals.currentUser = req.user;
+        next();
+        }
+    );
+
+// Additional passport configuration
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-app.use(function(req, res, next){
-    res.locals.currentUser = req.user;
-    next();
-});
 
 // Utilize route variables
 app.use(indexRoutes);
