@@ -14,19 +14,19 @@ router.get("/", function(req, res){
 // ===============
 
 // Show create user form
-router.get("/user/register", function(req, res){
+router.get("/register", function(req, res){
     res.render("register");
 })
 
 // Create a new user
-router.post("/user", function(req, res){
+router.post("/register", function(req, res){
     User.register({username: req.body.newUser.username}, 
     req.body.newUser.password,
     function(err, newUser){
         if(err){
             console.log(err);
         } else {
-            console.log(newUser);
+            res.redirect("/goshuins");
         }
     });
 });
