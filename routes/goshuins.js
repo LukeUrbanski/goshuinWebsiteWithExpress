@@ -22,12 +22,12 @@ router.get("/goshuins", function(req, res){
 //==============
 
 // Create a goshuin form route
-router.get("/goshuins/new", function(req, res){
+router.get("/goshuins/new", isLoggedIn, function(req, res){
     res.render("goshuins/new");
 });
 
 // Create a goshuin post route
-router.post("/goshuins", function(req, res){
+router.post("/goshuins", isLoggedIn, function(req, res){
     var newGoshuin = req.body;
     Goshuin.create(newGoshuin, function(err, newGoshuin){
         if(err){
@@ -60,7 +60,7 @@ router.get("/goshuins/:id", function(req, res){
 //==============
 
 // Show goshuin edit form
-router.get("/goshuins/:id/edit", function(req, res){
+router.get("/goshuins/:id/edit", isLoggedIn, function(req, res){
    Goshuin.findById(req.params.id, function(err, foundGoshuin){
        if(err){
            console.log("error");
@@ -71,7 +71,7 @@ router.get("/goshuins/:id/edit", function(req, res){
 });
 
 // Update goshuin post route
-router.put("/goshuins/:id", function(req, res){
+router.put("/goshuins/:id", isLoggedIn, function(req, res){
     Goshuin.findByIdAndUpdate(req.params.id,  req.body.goshuin, function(err, updatedGoshuin){
         if(err){
             console.log(err);
@@ -86,7 +86,7 @@ router.put("/goshuins/:id", function(req, res){
 //==============
 
 // Delete a goshuin
-router.delete("/goshuins/:id", function(req, res){
+router.delete("/goshuins/:id", isLoggedIn, function(req, res){
    Goshuin.findByIdAndDelete(req.params.id, function(err, deletedGoshuin){
        if(err){
            console.log(err);
@@ -95,5 +95,14 @@ router.delete("/goshuins/:id", function(req, res){
        }
    }); 
 });
+
+
+// Function to check if there is a current user logged in and redirect the user if not
+function isLoggedIn(req, res, next){
+    if(!req.user){
+        return res.redirect("/login");
+    }
+    return next();
+}
 
 module.exports = router;
