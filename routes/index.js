@@ -46,5 +46,13 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/login'})
 );
 
+// ===============
+// Logout routes
+// ===============
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/goshuins');
+});
+
 //Export the routes
 module.exports = router;
