@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-    <div id="myContainer" class="container bg-light">
+    <div id="myContainer" class="container bg-light p-5">
         <div class="row">
             <form class="col-md-12 p-3" action="/login" method="POST">
                 <div class="form-group">
@@ -11,6 +11,17 @@
                 </div>
                 <input type="submit">
             </form>
+        </div>
+        <p class="text-center">Or</p>
+        <hr>
+        <div class="row">
+            <!-- Facebook login button -->
+            <a href="/auth/facebook" class="mx-auto">
+                <button id="myFacebookButton" class="btn btn-lg p-2">
+                    <i class="fab fa-facebook-square fa-lg align-middle mr-1"></i>
+                    <span class="align-middle">Continue with Facebook</span>
+                </button>
+            </a>
         </div>
     </div>
 
