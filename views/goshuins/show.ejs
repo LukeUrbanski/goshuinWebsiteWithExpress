@@ -9,6 +9,7 @@
                     <img id="myShowPageImage" class="mx-auto d-block img-fluid" src="<%= goshuin.image %>" alt="A goshuin image">
                 </div>
             </div>
+            
             <!-- This column contains the details for a particular goshuin -->
             <div class="col-sm-12 col-md-3 bg-light">
                 <h4><%= goshuin.shrineOrTempleName %></h4>
@@ -16,13 +17,15 @@
                 <p>
                     <%= goshuin.comment %>
                 </p>
-                
-                <form class=" d-inline" action="/goshuins/<%= goshuin._id %>?_method=delete" method="POST">
-                    <button class="btn btn-danger btn-sm">Delete</button>
-                </form>
-                
-                    <a href="/goshuins/<%= goshuin._id %>/edit/"><button class="btn btn-warning btn-sm">Edit</button></a>
-                
+                <!-- User options for the document -->
+                <div class="btn-group">
+                    <form class="btn-group d-inline" action="/goshuins/<%= goshuin._id %>?_method=delete" method="POST">
+                        <button class="btn btn-info btn-sm">Delete</button>
+                    </form>
+                    <a class="btn-group" href="/goshuins/<%= goshuin._id %>/edit/">
+                        <button class="btn btn-info btn-sm">Edit</button>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- This row contains the comments for a particular goshuin -->
