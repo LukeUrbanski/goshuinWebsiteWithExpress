@@ -9,26 +9,33 @@
         <link rel="stylesheet" href="/main.css">
     </head>
     <body>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/">Goshuin Collecting</a>
+            <!-- Mobile navigation button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Collapsible navigation menu -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
-                    <li class="nav-item">
+                <ul class="navbar-nav ml-auto">
+                    <!-- If a user is logged in show the profile and logout link -->
+                    <% if(currentUser){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Welcome <%= currentUser.username %> !</a>
+                        </li>
+                        <li class="nav-item">
                         <a class="nav-link" href="/logout">Log out</a>
                     </li>
+                    <!-- If there is no user then show the login and register link -->
+                    <% } else { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
-            <!-- Print the username of a logged in user -->
-            <% if(currentUser){ %>
-            <p> Hello <%= currentUser.username %> </p>
-            <% } %>
         </nav>
