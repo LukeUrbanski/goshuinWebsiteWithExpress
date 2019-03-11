@@ -2,6 +2,10 @@ body{
     background-color: #536976;
 }
 
+.btn-group > a{
+    text-decoration: none;
+}
+
 /*container styling*/
 #myContainer{
     margin-top: 20px;
