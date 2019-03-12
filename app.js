@@ -31,7 +31,8 @@ seedDB();
 
 // Load routes
 var indexRoutes         = require("./routes/index.js"),
-    goshuinRoutes       = require("./routes/goshuins.js");
+    goshuinRoutes       = require("./routes/goshuins.js"),
+    commentRoutes       = require("./routes/comments.js");
 
 // General app settings
 app.set("view engine", "ejs");
@@ -97,6 +98,7 @@ passport.deserializeUser(User.deserializeUser());
 // Utilize route variables
 app.use(indexRoutes);
 app.use(goshuinRoutes);
+app.use(commentRoutes);
 
 // Create a UNIX socket
 app.listen(process.env.PORT, process.env.IP, function(){
