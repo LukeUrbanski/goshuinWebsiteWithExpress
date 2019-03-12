@@ -9,9 +9,9 @@ router.get("/", function(req, res){
     res.render("landing");
 });
 
-// ===============
+// ===============================
 // Register routes
-// ===============
+// ===============================
 
 // Show create user form
 router.get("/register", function(req, res){
@@ -31,9 +31,9 @@ router.post("/register", function(req, res){
     });
 });
 
-// ===============
+// ===============================
 // Login routes
-// ===============
+// ===============================
 
 // Show login form
 router.get("/login", function(req, res){
@@ -46,13 +46,27 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/login'})
 );
 
-// ===============
+// ===============================
 // Logout route
-// ===============
+// ===============================
 router.get('/logout', function(req, res){
   req.logout();
   res.redirect('/goshuins');
 });
+
+// ===============================
+// Facebook authentication routes
+// ===============================
+
+// Authenticate
+router.get("/auth/facebook", passport.authenticate("facebook"));
+
+// Callback
+router.get("/auth/facebook/callback",
+    passport.authenticate("facebook", {failureRedirect: "/login"}),
+    function(req, res){
+        res.redirect("/");
+    });
 
 //Export the routes
 module.exports = router;
