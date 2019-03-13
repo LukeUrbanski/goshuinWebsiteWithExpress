@@ -34,3 +34,4 @@ Other future plans
         - Improved error handling
         - Search engine optimisation
         - Improved styling
+        - AngularJS
