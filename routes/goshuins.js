@@ -28,7 +28,14 @@ router.get("/goshuins/new", isLoggedIn, function(req, res){
 
 // Create a goshuin post route
 router.post("/goshuins", isLoggedIn, function(req, res){
-    var newGoshuin = req.body;
+    var newGoshuin = {
+        authorId: req.user._id,
+        shrineOrTempleName: req.body.shrineOrTempleName,
+        generalLocation: req.body.generalLocation,
+        prefecture: req.body.prefecture,
+        image: req.body.image,
+        comment: req.body.comment
+    }
     Goshuin.create(newGoshuin, function(err, newGoshuin){
         if(err){
             console.log(err);
@@ -60,7 +67,7 @@ router.get("/goshuins/:id", function(req, res){
 //==============
 
 // Show goshuin edit form
-router.get("/goshuins/:id/edit", isLoggedIn, function(req, res){
+router.get("/goshuins/:id/edit", goshuinAuthorisationPermission, function(req, res){
    Goshuin.findById(req.params.id, function(err, foundGoshuin){
        if(err){
            console.log("error");
@@ -71,7 +78,7 @@ router.get("/goshuins/:id/edit", isLoggedIn, function(req, res){
 });
 
 // Update goshuin post route
-router.put("/goshuins/:id", isLoggedIn, function(req, res){
+router.put("/goshuins/:id", goshuinAuthorisationPermission, function(req, res){
     Goshuin.findByIdAndUpdate(req.params.id,  req.body.goshuin, function(err, updatedGoshuin){
         if(err){
             console.log(err);
@@ -86,7 +93,7 @@ router.put("/goshuins/:id", isLoggedIn, function(req, res){
 //==============
 
 // Delete a goshuin
-router.delete("/goshuins/:id", isLoggedIn, function(req, res){
+router.delete("/goshuins/:id", goshuinAuthorisationPermission, function(req, res){
    Goshuin.findByIdAndDelete(req.params.id, function(err, deletedGoshuin){
        if(err){
            console.log(err);
@@ -103,6 +110,29 @@ function isLoggedIn(req, res, next){
         return res.redirect("/login");
     }
     return next();
+}
+
+function goshuinAuthorisationPermission(req, res, next){
+    //Check if the user is authenticated
+    if(req.isAuthenticated()){
+        // Check if the authenticated user ID matches the goshuin author ID
+        Goshuin.findById(req.params.id, function(err, foundGoshuin){
+            if(err){
+                console.log(err);
+            } else {
+                // If the campground author ID matches the authenticated user's ID
+                if(foundGoshuin.authorId == req.user._id){
+                    return next();
+                } 
+                // If the campground author ID does not match the authenticated user's ID
+                else {
+                    res.redirect("back");
+                }
+            }
+        })
+    } else {
+        res.redirect("/login");
+    }
 }
 
 module.exports = router;
