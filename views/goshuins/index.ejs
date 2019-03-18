@@ -3,7 +3,7 @@
 <div id="myContainer" class="container">
   
 <!--Jumbotron (Page header) -->  
-  <header class="jumbotron">
+  <header class="jumbotron box-shadow">
     <div class="container">
       <h1>Please look at some goshuins</h1> 
       <p>View seals from temples and shrines all over Japan!</p>
@@ -19,7 +19,7 @@
     <!-- forEach loop that traverses through the passed object -->
     <% goshuins.forEach(function(goshuin){ %>
      
-      <div class="card bg-light">
+      <div class="card bg-light box-shadow">
         <h5 class="card-header"><%= goshuin.shrineOrTempleName %></h5>
         <img id="myCardImage" class="card-img-top" src="<%= goshuin.image %>" alt="An image of a goshuin">
         <div class="card-body">
