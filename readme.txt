@@ -11,12 +11,12 @@ Users can...
     - Create new goshuin entries
     - Edit past goshuin entries
     - Delete past goshuin entries
+    - Create comments
     
 Future plans
 ===================
 
 Users will be able to...
-    - Create comments
     - Edit past comments
     - Delete past comments
     - Upload images to the website
