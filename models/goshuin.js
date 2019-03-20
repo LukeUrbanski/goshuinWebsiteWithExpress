@@ -8,6 +8,7 @@ var goshuinSchema = new mongoose.Schema({
     prefecture: String,
     image: String,
     comment: String,
+    userComments: [{type: mongoose.Schema.Types.ObjectId, ref: "Comment"}],
     date: String
 });
 
