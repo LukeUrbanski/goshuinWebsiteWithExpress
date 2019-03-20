@@ -39,7 +39,7 @@
                 <!-- This forEach loop iterates over the userComments array -->
                 <% goshuin.userComments.forEach(function(comment){ %>
                     <div>
-                        <h6>Test comment</h6>
+                        <h6><%= comment.commentAuthor.username %></h6>
                         <p><%= comment.comment %></p>
                     </div>
                 <% }) %>
