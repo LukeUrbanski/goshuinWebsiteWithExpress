@@ -53,7 +53,7 @@ router.post("/goshuins", isLoggedIn, function(req, res){
 // Read a specific goshuin route
 router.get("/goshuins/:id", function(req, res){
     Goshuin.findById(req.params.id).
-    populate('userComments').exec(function(err, foundGoshuin) {
+    populate({path: 'userComments', populate: {path: "commentAuthor"}}).exec(function(err, foundGoshuin) {
       if(err){ 
           return console.log(err);
       } else {
