@@ -2,7 +2,7 @@
 
     <div id="myContainer" class="container bg-light">
         <div class="row">
-            <form class="col-md-12 p-3" action="/comments" method="POST">
+            <form class="col-md-12 p-3" action="/goshuins/<%= goshuin._id %>/comments" method="POST">
                 <div class="form-group">
                     <textarea class="form-control" type="text" name="comment" placeholder="Any thoughts or comments about this goshuin are welcome." rows="3"></textarea>
                 </div>
