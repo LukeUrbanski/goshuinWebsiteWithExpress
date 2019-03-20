@@ -24,7 +24,8 @@ router.get("/goshuins/:id/comments/new", function(req, res){
 router.post("/goshuins/:id/comments/", function(req, res){
     // Store the posted data into a variable
     var postedComment = {
-       comment: req.body.comment,
+        commentAuthor: req.user._id,
+        comment: req.body.comment,
    }
    // Find the relevant goshuin
    Goshuin.findById(req.params.id, function(err, foundGoshuin){
