@@ -60,17 +60,7 @@ router.get("/goshuins/:id", function(req, res){
         res.render("goshuins/show", {goshuin: foundGoshuin});  
       }
     })
-    
-    
-    // Goshuin.findById(req.params.id, function(err, foundGoshuin){
-    //     if(err){
-    //         console.log(err);
-    //     } 
-    //     res.render("goshuins/show", {goshuin: foundGoshuin});
-    // });
 });
-
-
 
 // =============
 // Edit routes
