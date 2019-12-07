@@ -101,6 +101,6 @@ app.use(goshuinRoutes);
 app.use(commentRoutes);
 
 // Create a UNIX socket
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, () => {
     console.log("The server has started");
 });
