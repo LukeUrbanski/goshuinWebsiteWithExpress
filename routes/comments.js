@@ -49,4 +49,12 @@ router.post("/goshuins/:id/comments/", function(req, res){
    })
 })
 
+// =================================
+// Show edit comment form
+// =================================
+
+router.get("/goshuins/:id/comments/:comment_id/edit", function(req, res){
+	res.render("comments/edit.ejs");
+})
+
 module.exports = router;
