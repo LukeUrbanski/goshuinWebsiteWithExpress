@@ -43,6 +43,11 @@
                         <p class="d-inline text-secondary myComment"><%= comment.date.toDateString() %></p>
                         <p><%= comment.comment %></p>
                     </div>
+				<a href="/goshuins/<%=goshuin.id%>/comments/<%=comment.id%>/edit">
+					<button class="btn btn-info btn-sm">
+						Edit
+					</button>
+				</a>
                 <% }) %>
             </div>
         </div>
