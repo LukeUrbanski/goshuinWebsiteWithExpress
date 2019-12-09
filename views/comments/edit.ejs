@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+    <div id="myContainer" class="container bg-light">
+        <div class="row">
+            <form class="col-md-12 p-3" action="/goshuins/<%= goshuin_id %>/comments/<%= comment._id%>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <textarea class="form-control" type="text" name="comment[comment]" rows="3"><%=comment.comment%></textarea>
+                </div>
+                <input class="btn btn-info" type="submit">
+            </form>
+        </div>
+    </div>
+
+<% include ../partials/footer %>
