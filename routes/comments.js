@@ -50,11 +50,29 @@ router.post("/goshuins/:id/comments/", function(req, res){
 })
 
 // =================================
-// Show edit comment form
+// Edit routes
 // =================================
 
+// Show edit comment form
 router.get("/goshuins/:id/comments/:comment_id/edit", function(req, res){
-	res.render("comments/edit.ejs");
+	Comment.findById(req.params.comment_id, function(err, foundComment){
+		if(err){
+			console.log(err);
+		} else {
+			res.render("comments/edit.ejs", {comment: foundComment, goshuin_id: req.params.id});
+		}
+	})
+})
+
+//post edited comment
+router.put("/goshuins/:id/comments/:comment_id", function(req, res){
+	Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComment){
+		if(err){
+			res.redirect("back");
+		} else {
+			res.redirect("/goshuins/" + req.params.id);
+		}
+	})
 })
 
 module.exports = router;
