@@ -12,12 +12,12 @@ Users can...
     - Edit past goshuin entries
     - Delete past goshuin entries
     - Create comments
+	- Edit past comments
     
 Future plans
 ===================
 
 Users will be able to...
-    - Edit past comments
     - Delete past comments
     - Upload images to the website
     - Log in with Reddit
